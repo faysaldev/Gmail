@@ -1,0 +1,261 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+}
+.header__left{
+    display: flex;
+    align-items: center;
+}
+.header__left a > img{
+    height: 80px;
+    object-fit: contain;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.header__middle{
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    flex: 0.7;
+    padding: 9px;
+    border-radius: 3px;
+}
+.header__middle > input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 15px;
+}
+.header__middle .MuiSvgIcon-root{
+    color: gray;
+}
+.header__middle .arrow__icon{
+    cursor: pointer;
+    color: black;
+}
+.header__right{
+    display: flex;
+    padding: 20px;
+}
+
+.header__right .MuiSvgIcon-root{
+    margin-left: 5px;
+}
+
+.header__right .avatar:hover{
+transform: scale(1.1);
+cursor: pointer;
+transition: .2s;
+}
+
+@media (max-width: 568px){
+    .header__left a > img{
+        height: 60px;
+        margin-left: 3px;
+    }
+
+    .header__right .MuiSvgIcon-root{
+        margin-left: 2px;
+    }
+
+    .header__middle{
+        padding: 5px;
+    }
+}
+
+/* Header is prety much Finished */
+
+
+/* style for the sidebar */
+.sidbar{
+    flex: 0.3;
+    max-width: 300px;
+    padding-right: 20px;
+}
+
+.sidbar .compres{
+    margin-top: 15px !important;
+    margin-left: 10px !important;
+    margin-bottom: 15px !important;
+    text-transform: capitalize !important;
+    color: gray;
+    padding: 15px !important;
+    border-radius: 30px !important;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
+}
+.sidbar .add__icon{
+    color: rgb(219, 71, 71);
+}
+
+/* style for the sidbarRow */
+.sidbar .sidbarRow{
+    display: flex;
+    align-items: center;
+    color: #818181;
+    height: 40px;
+    padding: 0 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    transition: .1s ease;
+    margin-bottom: 10px;
+}
+
+.sidbarRow h3{
+    flex: 1 1;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.sidbarRow p{
+    display: none;
+    font-weight: 800;
+}
+.sidbar .sidbarRow.active{
+    background-color: #fcecec;
+    color: #c04b37;
+    font-weight: 800!important;
+}
+
+ .sidbarRow.active>h3, .sidbarRow.active>p, .sidbarRow:hover, .sidbarRow:hover>h3, .sidbarRow:hover>p{
+    background-color: #fcecec;
+    color: #c04b37;
+    font-weight: 800!important;
+}
+.sidbarRow:hover p{
+    display: block;
+}
+
+.sidbarRow.active > p{
+    display: block;
+}
+
+.sidebar__fotter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* for the middle emaillist  */
+
+
+/* =========== style for the feed email list============== */
+
+.home{
+    flex: 1;
+    overflow: scroll;
+    height: 100vh;
+}
+
+.home::-webkit-scrollbar{
+    width: 0;
+}
+
+.home .email__listSetting{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+.emaillist__options{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    border-bottom: 1px solid whitesmoke;
+    background-color: white;
+}
+.emailList__option{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    min-width: 200px;
+    cursor: pointer;
+    border-bottom-width: 2px;
+    border-width: 0px !important;
+    margin-left: 3px;
+    color: gray;
+}
+
+.emailList__option.emaillist__active{
+    background-color: whitesmoke;
+    border-width: 3px !important;
+}
+.emailList__option:hover{
+    border-width: 3px !important;
+    background-color: whitesmoke;
+}
+
+.emailList__option h4{
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.all__emails {
+    margin-bottom: 30px;
+}
+
+/* ============style for the emailListRow ============== */
+.email__listRow {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid whitesmoke;
+    cursor: pointer;
+    z-index: 99999;
+    padding-right: 30px;
+}
+.emailRow__options{
+    display: flex;
+    align-items: center;
+}
+.email__listRow:hover{
+    border-top: 1px solid whitesmoke;
+    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.24);
+}
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.emailRow__messages {
+    display: flex;
+    align-items: center;
+    flex: 0.8;
+    font-size: 13px;
+}
+
+.emailRow__messages h4{
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.emailRow__messages span {
+    color: gray;
+    font-weight: 400;
+    margin-left: 9px;
+}
+.email__listRow .time{
+    padding-right: 15px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.email__listRow h3 {
+    font-size: 15px;
+    flex: 0.2;
+}
